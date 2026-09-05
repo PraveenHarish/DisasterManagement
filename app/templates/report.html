@@ -1,46 +1,39 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<h2>Report an Incident</h2>
+<h1 class="page-title">Report an Incident</h1>
 
-<form method="POST">
+<form method="POST" class="report-form">
 
 {% csrf_token %}
 
-<input type="text" name="name" placeholder="Name" required>
+<input type="text" name="name" placeholder="Full Name" required>
 
 <select name="disaster">
-
 <option>Flood</option>
 <option>Earthquake</option>
 <option>Fire</option>
 <option>Cyclone</option>
-
+<option>Heat Wave</option>
 </select>
 
 <input type="text" name="location" placeholder="Location" required>
 
-<textarea name="description" placeholder="Describe the incident"></textarea>
+<textarea name="description" rows="5" placeholder="Describe the incident"></textarea>
 
 <button type="submit">Submit Report</button>
 
 </form>
 
-<h2>Recent Reports</h2>
+<h2 class="title">Recent Reports</h2>
 
 {% for r in reports %}
 
-<div class="card">
-
-<h3>{{ r.name }}</h3>
-
-<p><b>Disaster:</b> {{ r.disaster }}</p>
-
-<p><b>Location:</b> {{ r.location }}</p>
-
-<p>{{ r.description }}</p>
-
+<div class="report-card">
+<h3>{{r.name}}</h3>
+<p><b>Disaster:</b> {{r.disaster}}</p>
+<p><b>Location:</b> {{r.location}}</p>
+<p>{{r.description}}</p>
 </div>
 
 {% endfor %}

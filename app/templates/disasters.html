@@ -1,27 +1,31 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<h2>Disaster Types</h2>
+<h1 class="page-title">Disaster Information</h1>
 
-<div class="card">
-<h3>Flood</h3>
-<p>Move to higher ground and avoid walking through water.</p>
+<div class="disaster-card">
+    <h2>🌊 Flood</h2>
+    <p>Floods occur due to excessive rainfall, dam overflow and river flooding. Move to higher ground immediately.</p>
 </div>
 
-<div class="card">
-<h3>Earthquake</h3>
-<p>Drop, Cover and Hold until shaking stops.</p>
+<div class="disaster-card">
+    <h2>🌍 Earthquake</h2>
+    <p>Earthquakes are sudden movements of the Earth's crust. Drop, Cover and Hold during shaking.</p>
 </div>
 
-<div class="card">
-<h3>Cyclone</h3>
-<p>Stay indoors and keep emergency supplies ready.</p>
+<div class="disaster-card">
+    <h2>🔥 Fire</h2>
+    <p>Fire spreads rapidly through buildings. Use emergency exits and never use elevators.</p>
 </div>
 
-<div class="card">
-<h3>Heat Wave</h3>
-<p>Drink plenty of water and avoid direct sunlight.</p>
+<div class="disaster-card">
+    <h2>🌪 Cyclone</h2>
+    <p>Stay indoors, avoid coastal areas and keep emergency supplies ready.</p>
+</div>
+
+<div class="disaster-card">
+    <h2>☀ Heat Wave</h2>
+    <p>Drink plenty of water, wear light clothing and avoid outdoor activities during peak hours.</p>
 </div>
 
 {% endblock %}

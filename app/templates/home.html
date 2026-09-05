@@ -1,32 +1,41 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<div class="hero">
+<section class="hero">
+    <div class="overlay">
+        <h1>Be Prepared Before Disaster Strikes</h1>
+        <p>Smart Disaster Management System for Emergency Response and Community Safety.</p>
 
-<h2>Be Prepared. Stay Safe.</h2>
+        <a href="/preparedness/" class="btn">Explore Safety Guide</a>
+    </div>
+</section>
 
-<p>Helping communities respond effectively during disasters.</p>
-
-<a href="/preparedness/" class="btn">Learn Safety Tips</a>
-
-</div>
+<h2 class="title">Major Disasters</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Flood</h3>
-<p>Heavy rainfall and rising water levels.</p>
+    <div class="emoji">🌊</div>
+    <h3>Flood</h3>
+    <p>Heavy rainfall, overflowing rivers and urban flooding.</p>
 </div>
 
 <div class="card">
-<h3>Earthquake</h3>
-<p>Sudden ground shaking and structural damage.</p>
+    <div class="emoji">🌍</div>
+    <h3>Earthquake</h3>
+    <p>Ground shaking and structural damage.</p>
 </div>
 
 <div class="card">
-<h3>Fire</h3>
-<p>Emergency evacuation and rescue guidance.</p>
+    <div class="emoji">🔥</div>
+    <h3>Fire</h3>
+    <p>Residential and industrial fire emergencies.</p>
+</div>
+
+<div class="card">
+    <div class="emoji">🌪</div>
+    <h3>Cyclone</h3>
+    <p>Strong winds and coastal disasters.</p>
 </div>
 
 </div>

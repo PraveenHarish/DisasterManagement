@@ -1,79 +1,193 @@
-body{
-font-family:Arial;
+*{
 margin:0;
-background:#eef4f8;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#eef5fb;
+color:#333;
 }
 
 header{
-background:#0d6efd;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#0b3d91;
+position:sticky;
+top:0;
+}
+
+.logo{
 color:white;
-padding:15px;
+font-size:24px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
-margin-right:15px;
+margin-left:18px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 }
 
 .container{
-padding:25px;
+width:90%;
+margin:auto;
+padding:30px 0;
 }
 
 .hero{
-background:white;
-padding:40px;
-border-radius:10px;
-text-align:center;
-margin-bottom:25px;
+height:430px;
+border-radius:18px;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=1600");
+background-size:cover;
+display:flex;
+align-items:center;
+padding:50px;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+width:60%;
+font-size:18px;
+line-height:30px;
 }
 
 .btn{
-background:#198754;
-color:white;
-padding:12px 20px;
-text-decoration:none;
-border-radius:6px;
 display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#16a34a;
+color:white;
+text-decoration:none;
+border-radius:8px;
 }
 
-.grid{
+.title,.page-title{
+text-align:center;
+margin:30px 0;
+color:#0b3d91;
+}
+
+.grid,.contact-grid,.tips{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.card{
+.card,.contact-card,.tip-box,.shelter,.disaster-card,.report-card{
 background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.15);
-margin-top:20px;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-table{
-width:100%;
-background:white;
-border-collapse:collapse;
+.card:hover,.contact-card:hover,.tip-box:hover{
+transform:translateY(-6px);
 }
 
-table,th,td{
-border:1px solid #ccc;
-padding:12px;
+.emoji{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.contact-card{
+text-align:center;
+}
+
+.contact-card h2{
+font-size:34px;
+color:#0b3d91;
+}
+
+.disaster-card{
+margin-bottom:20px;
+border-left:6px solid #2563eb;
+}
+
+.shelter-list{
+display:grid;
+gap:18px;
+}
+
+.map-box{
+margin-top:30px;
+padding:40px;
+text-align:center;
+background:#dbeafe;
+border-radius:15px;
+}
+
+.report-form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 input,select,textarea{
 width:100%;
-padding:12px;
-margin:10px 0;
+padding:14px;
+margin:12px 0;
+border:1px solid #ccc;
+border-radius:8px;
 }
 
 button{
-background:#0d6efd;
-color:white;
-padding:12px;
-border:none;
 width:100%;
+padding:14px;
+background:#0b3d91;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
 cursor:pointer;
+}
+
+button:hover{
+background:#082d69;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+text-align:center;
+background:#0b3d91;
+color:white;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
+.hero{
+padding:30px;
+height:350px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+width:100%;
+font-size:16px;
+}
+
 }
